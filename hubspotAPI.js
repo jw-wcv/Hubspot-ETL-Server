@@ -26,7 +26,7 @@ class HubspotAPI {
     console.log('page Size: ' + pageSize);
 
     //change this to configure how many max pages to process
-    let maxPagesToProcess = 10;
+    let maxPagesToProcess = 500;
   
     while (response.paging && response.paging.next && pageNum != maxPagesToProcess) {
       console.log(`Fetching page ${pageNum}${totalNumPages ? ` of ${totalNumPages}` : ''}`);
