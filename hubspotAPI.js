@@ -129,8 +129,8 @@ class HubspotAPI {
       }
   }
 
-  async getCustomObjects() {
-    const objectTypeId = 'custom_object_type_id'; // Replace with your custom object's type ID
+  async getCustomObjects(objectTypeId) {
+    //const objectTypeId = 'custom_object_type_id'; // Replace with your custom object's type ID
     try {
       const response = await axios.get(`${this.apiUrl}/crm/v3/objects/${objectTypeId}`, { headers: this.headers });
       const customObjects = await this.fetchAllPages(response.data, this.headers, 100);
